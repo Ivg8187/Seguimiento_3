@@ -1,0 +1,49 @@
+@model IEnumerable<TitanesDelValle.Models.Aspirante>
+
+@{
+    ViewData["Title"] = "Panel de Aspirantes";
+}
+
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">Panel de Control - Aspirantes Registrados</h2>
+        <a asp-action="Registro" class="btn btn-outline-primary">← Volver al formulario</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle border">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Categoría</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!Model.Any())
+                {
+                    <tr>
+                        <td colspan="6" class="text-center text-muted py-4">No hay aspirantes registrados todavía.</td>
+                    </tr>
+                }
+                else
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td><strong>@item.Nombre</strong></td>
+                            <td>@item.Correo</td>
+                            <td>@item.Telefono</td>
+                            <td><span class="badge bg-primary">@item.Categoria</span></td>
+                            <td>@item.FechaRegistro.ToString("dd/MM/yyyy HH:mm")</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

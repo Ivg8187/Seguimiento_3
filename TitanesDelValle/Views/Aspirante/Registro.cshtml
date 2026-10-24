@@ -1,0 +1,50 @@
+@model TitanesDelValle.Models.Aspirante
+
+@{
+    ViewData["Title"] = "Únete a Titanes";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow border-0 p-4">
+                <h2 class="fw-bold mb-3 text-primary">Tu lugar está aquí</h2>
+                <p class="text-muted">Cuéntanos quién eres y te conectaremos con el equipo.</p>
+                
+                <form asp-action="Registro" method="post">
+                    <div class="mb-3">
+                        <label asp-for="Nombre" class="form-label">Nombre completo *</label>
+                        <input asp-for="Nombre" class="form-control" placeholder="Tu nombre" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Correo" class="form-label">Correo electrónico *</label>
+                        <input asp-for="Correo" type="email" class="form-control" placeholder="tu@correo.com" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Telefono" class="form-label">Teléfono</label>
+                        <input asp-for="Telefono" class="form-control" placeholder="300 000 0000" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Categoria" class="form-label">Categoría de interés *</label>
+                        <select asp-for="Categoria" class="form-select" required>
+                            <option value="">Selecciona una opción...</option>
+                            <option value="Formativo">Formativo</option>
+                            <option value="Competitivo">Competitivo</option>
+                            <option value="Recreativo">Recreativo</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Mensaje" class="form-label">Cuéntanos un poco más</label>
+                        <textarea asp-for="Mensaje" class="form-control" rows="3" placeholder="Edad, experiencia..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Enviar solicitud →</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
