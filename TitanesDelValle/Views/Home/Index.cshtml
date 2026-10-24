@@ -1,8 +1,131 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<header id="inicio" class="encabezado-principal text-white text-center py-5">
+    <div class="container py-4">
+        <p class="text-uppercase fw-semibold">Club oficial · Medellín, Colombia</p>
+        <h1 class="display-4 fw-bold mb-3 text-white">Juega con carácter</h1>
+        <p class="lead mb-4 col-lg-8 mx-auto text-white">Formamos atletas, construimos equipo y competimos para dejar huella dentro y fuera de la cancha.</p>
+        <div>
+            <a href="~/Aspirante/Registro" class="btn btn-warning btn-lg me-2 mb-2">Entrena con nosotros →</a>
+            <a href="#club" class="btn btn-outline-light btn-lg mb-2">Conoce nuestra historia ↓</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- BANNER DE TEXTO -->
+    <section class="bg-dark text-warning py-3 text-center fw-bold text-uppercase overflow-hidden">
+        <div class="container">
+            <span>Disciplina ✦ Comunidad ✦ Competencia ✦ Disciplina ✦ Comunidad ✦ Competencia</span>
+        </div>
+    </section>
+
+    <!-- SECCIÓN EL CLUB -->
+    <section id="club" class="container py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-5">
+                <p class="text-primary fw-bold text-uppercase">Nuestra identidad</p>
+                <h2 id="club-title" class="display-6 fw-bold">El balón nos conecta.</h2>
+            </div>
+            <div class="col-lg-7">
+                <p class="text-muted">Titanes del Valle nació en 2016 con una idea sencilla: que cada persona pudiera encontrar en el baloncesto un lugar para crecer.</p>
+                <p class="text-muted">Hoy somos una comunidad de deportistas, familias y entrenadores que comparte el respeto por el juego y la ambición de mejorar cada día. Nuestra cancha es un punto de encuentro para todas las edades.</p>
+                <ul class="list-unstyled mt-4">
+                    <li class="mb-2"><strong>1</strong><b> Entrenamiento con propósito:</b> Cada sesión tiene una intención y cada jugador, un camino.</li>
+                    <li class="mb-2"><strong>2</strong><b> Equipo antes que ego:</b> La mejor jugada siempre es la que nos hace avanzar juntos.</li>
+                    <li><strong>3</strong><b> Juego limpio:</b> Competimos con intensidad, respeto y alegría.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN EQUIPOS -->
+    <section id="equipos" class="bg-light py-5">
+        <div class="container">
+            <div class="row mb-4 align-items-center">
+                <div class="col-lg-6">
+                    <p class="text-primary fw-bold text-uppercase mb-1">Elige tu categoría</p>
+                    <h2 id="teams-title" class="fw-bold">Un equipo para<br>cada etapa.</h2>
+                </div>
+                <div class="col-lg-6">
+                    <p class="text-muted">Desde los primeros botes hasta el alto rendimiento, aquí siempre hay una camiseta para ti.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <article class="tarjeta h-100 shadow-sm border-0">
+                        <h3 class="h5 text-primary">Primera<br>masculina</h3>
+                        <p class="text-muted">La punta de nuestro proyecto deportivo.</p>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <article class="tarjeta h-100 shadow-sm border-0">
+                        <h3 class="h5 text-primary">Juvenil<br>mixto</h3>
+                        <p class="text-muted">Aprender, competir y disfrutar.</p>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <article class="tarjeta h-100 shadow-sm border-0">
+                        <h3 class="h5 text-primary">Mini<br>basket</h3>
+                        <p class="text-muted">El comienzo de una gran historia.</p>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <article class="tarjeta h-100 shadow-sm border-0">
+                        <h3 class="h5 text-primary">Baloncesto<br>femenino</h3>
+                        <p class="text-muted">Pasión y entrega en cada partido.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CALENDARIO -->
+    <section id="calendario" class="container py-5">
+        <div class="mb-4">
+            <p class="text-primary fw-bold text-uppercase mb-1">Próximos encuentros</p>
+            <h2 id="schedule-title" class="fw-bold">Nos vemos<br>en la cancha.</h2>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle border">
+                <caption class="text-muted">Calendario de partidos de Titanes del Valle, temporada 2026</caption>
+                <thead class="table-dark">
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Partido</th>
+                        <th>Categoría</th>
+                        <th>Lugar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>12</strong> SEP</td>
+                        <td>Titanes <b>vs.</b> Halcones</td>
+                        <td>Primera masculina</td>
+                        <td>Coliseo El Poblado</td>
+                    </tr>
+                    <tr>
+                        <td><strong>19</strong> SEP</td>
+                        <td>Leonas <b>vs.</b> Titanes</td>
+                        <td>Baloncesto femenino</td>
+                        <td>Unidad Atanasio</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"><strong>26</strong> SEP</td>
+                        <td>Titanes <b>vs.</b> Cóndores</td>
+                        <td>Juvenil mixto</td>
+                        <td>Cancha Titán</td>
+                    </tr>
+                    <tr>
+                        <td>Titanes <b>vs.</b> Panteras</td>
+                        <td>Mini basket</td>
+                        <td>Cancha Titán</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
